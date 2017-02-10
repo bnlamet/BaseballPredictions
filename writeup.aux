@@ -1,0 +1,85 @@
+\relax 
+\select@language{english}
+\@writefile{toc}{\select@language{english}}
+\@writefile{lof}{\select@language{english}}
+\@writefile{lot}{\select@language{english}}
+\@writefile{toc}{\contentsline {section}{\numberline {1}Introduction}{1}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.1}The Problem}{1}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.2}Impact}{1}}
+\@writefile{toc}{\contentsline {section}{\numberline {2}The Setup}{2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.1}The Data}{2}}
+\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces This table shows a sample of the data in the atbats.csv file. Note that this table can be merged with the games table by doing an inner join on the game\_path columns.\relax }}{2}}
+\providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
+\newlabel{atbats}{{1}{2}}
+\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces This table shows a sample of the data in the games.csv file. Note that game\_path acts as a unique id for the row, and the value has been ommitted to save space.\relax }}{2}}
+\newlabel{games}{{2}{2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2}Understanding the Data}{2}}
+\newlabel{sec:data}{{2.2}{2}}
+\citation{pitchfx}
+\@writefile{lot}{\contentsline {table}{\numberline {3}{\ignorespaces This table shows a sample of the data in the pitches.csv file. Note this table can be merged with the atbats table by doing an inner join on the ab\_num and game\_path columns.\relax }}{3}}
+\newlabel{pitches}{{3}{3}}
+\newlabel{Atbat Outcome}{{\caption@xref {Atbat Outcome}{ on input line 127}}{3}}
+\@writefile{lot}{\contentsline {table}{\numberline {4}{\ignorespaces This table shows what the possible outcomes of an at bat could be, and the number of occurrences of each in the data set.\relax }}{3}}
+\newlabel{outcomes}{{4}{3}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3}Pre-processing the Data}{4}}
+\newlabel{sec:preprocess}{{2.3}{4}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.4}Methodology}{4}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces We setup a general framework for this problem - a program that can easily be extended to incorporate new and better models. This diagram outlines how different components of the problem were separated out to allow for this easy extendability, and it shows how the evaluation of our models is incorporated into the program.\relax }}{4}}
+\newlabel{fig:flow}{{1}{4}}
+\@writefile{toc}{\contentsline {section}{\numberline {3}The Mathematical Models}{5}}
+\newlabel{sec:models}{{3}{5}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Establishing A Baseline}{5}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.1.1}Baseline 1}{5}}
+\newlabel{simple}{{1}{5}}
+\citation{log5}
+\citation{log5}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.1.2}Baseline 2}{6}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.1.3}Baseline 3}{6}}
+\newlabel{sec:log5}{{3.1.3}{6}}
+\newlabel{log5}{{2}{6}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Machine Learning on Situational Statistics}{7}}
+\newlabel{sec:ml}{{3.2}{7}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.1}Random Forests}{7}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.2}Naive Bayes}{7}}
+\citation{sklearn}
+\citation{tree}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.3}Weighted Decision Trees}{8}}
+\newlabel{sec:smoothdtree}{{3.2.3}{8}}
+\@writefile{lot}{\contentsline {table}{\numberline {5}{\ignorespaces Tabular representations of an unsmoothed/smoothed decision tree for Ian Kinsler. Note how the rows with less at bats are skewed more than the rows with more at bats after smoothing has been applied.\relax }}{8}}
+\newlabel{fig:weight}{{5}{8}}
+\newlabel{weight}{{5}{8}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3}Markov Models}{8}}
+\citation{markov}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Each gray circle is a transient state. Each coordinate in the grid represents the current count of balls and strikes. The colored terminal states represent the outcome of the at bat (Hit, Walk, or Out). You can transition between transient states by moving down or to the right, representing a ball or a strike/foul respectively. You can also transition from any transient state to any terminal state, but these connections are not explicitly drawn.\relax }}{9}}
+\newlabel{fig:markovchain}{{2}{9}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces This figure is a tabular representation of figure~\ref  {fig:markovchain}. Each coordinate in the table represents the current count, and the letters in each cell of the table correspond to the events that would result a transition from one state to another, where S=Strike, F=Foul, B=Ball, X=Out, H=Hit, and P=Hit By Pitch.\relax }}{9}}
+\newlabel{fig:markovtable}{{3}{9}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.3.1}Simple Markov Model}{9}}
+\newlabel{markov2}{{3.3.1}{9}}
+\@writefile{lot}{\contentsline {table}{\numberline {6}{\ignorespaces This table demonstrates how the pitch outcome probabilities are approximated for each count using the smoothing procedure introduced in section~\ref  {sec:smoothdtree}.\relax }}{10}}
+\newlabel{count}{{6}{10}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.3.2}Markov Model 2}{10}}
+\newlabel{ptype}{{4}{11}}
+\newlabel{matvec}{{5}{11}}
+\citation{kde}
+\citation{kde}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.3.3}Markov Model 3}{12}}
+\newlabel{sec:markov3}{{3.3.3}{12}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces These figures show the pitch location distribution for four different pitch types for Rick Porcello. It's clear from the figures that pitch type and pitch location are not independent, as the shape of the density function is so different for each pitch type.\relax }}{12}}
+\newlabel{fig:kde1}{{4}{12}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces These figures show the conditional PDF's $ P(outcome | x,y) $ for each outcome for Ian Kinsler generated with KDE. The shapes of the distributions are pretty intuitive. For example, the probability of a ball increases as the ball moves further away from the center of the strike zone. The probability of a hit peaks in the middle of the strike zone, but it also has local maxima on the edges of the domain, which show where some of Ian Kinsler's \emph  {hot spots} are. \relax }}{13}}
+\newlabel{fig:kde2}{{5}{13}}
+\newlabel{xy}{{7}{13}}
+\newlabel{typexy}{{8}{13}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.3.4}Bringing it All Together}{13}}
+\@writefile{toc}{\contentsline {section}{\numberline {4}Analysis}{13}}
+\citation{bscore}
+\@writefile{toc}{\contentsline {section}{\numberline {5}Conclusion and Future Work}{14}}
+\citation{logistic}
+\newlabel{label}{{\caption@xref {label}{ on input line 537}}{15}}
+\@writefile{lot}{\contentsline {table}{\numberline {7}{\ignorespaces This table of results shows the scores for each model. While it is difficult to derive much meaning from the raw scores, these results can be interpreted by looking at the relative scores in each category. Note in particular that the Naive Bayes algorithm performed the best in terms of the log-loss metric, while baseline 1 performed the best in terms of the brier score. Also note that the Weighted DTree attained the best resolution out of all the models with reliability $< 0.02$\relax }}{15}}
+\newlabel{results}{{7}{15}}
+\@writefile{toc}{\contentsline {section}{\numberline {6}Acknowledgements}{15}}
+\citation{*}
+\bibstyle{abbrv}
+\bibdata{references}

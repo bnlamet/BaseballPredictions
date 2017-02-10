@@ -1,0 +1,35 @@
+Statement of goal
+Discussion of Metrics (Log Loss + Quad Loss)
+Log Loss is more powerful for picking up outliers
+Measurable objective
+
+What do we have?
+Roadmap
+Connect to goal
+Examples - Work out Porcello vs. Kinsler
+
+Tell the story of the problem, not the tasks that we did
+
+More than one way to do the problem
+
+
+
+Accomplishments:
+- Parsed data for 2015 season (now there's about 4.5 M rows of data)
+	- Correctly parsed time now and game_type (e.g. regular season)
+- Refactored code to be more extendable
+- implemented 3 machine learning based prediction algorithms
+ - Input Features: ['time_et', 'date', 'away_team', 'home_team', 'b_stand', 'p_throws','inning_half', 'batter_id', 'pitcher_id']
+- Visualized pitch distributions
+- Started exploring the grid based method for computing batter vs. pitcher probabilities
+- Derived math for kernel density estimation (KDE) method
+- Started implementing KDE method
+
+To Do List:
+- Tune parameters for machine learning models (easy - just look at sklearn documentation)
+- Format data better (for example, classify time as day or night) - (medium - will require a little bit of coding)
+- Implement 10-fold Cross Validation (easy - see sklearn documentation, will require reserch as to what 10-fold cross validation is)
+- Refactor code to do machine learning on a per-batter/pitcher basis (hard - need to be careful to not break things in refactoring process)
+- Use sklearn to analyze the feature importances so we know what values are important (very easy - just call tree.feature_importances)
+- Identify possible libraries for numerical integration
+- Try to improve machine learning algorithms by annotating data with additional columns for batter statistics and pitcher statistics (medium/hard - will require some coding)
